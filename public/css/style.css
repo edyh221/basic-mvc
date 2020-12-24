@@ -1,0 +1,44 @@
+.container {
+    margin: 0 400px;
+    border: 1px solid #dad0d0;
+    padding: 10px 40px;
+    font-family: cursive;
+}
+a {
+    text-decoration: none;
+    color: #484444;
+}
+.link:hover {
+    color: #a2a2a2;
+}
+.link-back {
+    background: #4d4e50;
+    color: #eaeaea;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+.link-back:hover {
+    color: white;
+}
+
+.link-edit {
+    background-color: #ffc107;
+    border-radius: 10px;
+    padding: 0px 10px;
+    color: #4a4a4a;
+}
+
+.link-edit:hover {
+    color: black;
+}
+
+.link-delete {
+    background-color: #ff2828;
+    color: white;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.link-delete:hover {
+    color: #d0d0d0;
+}

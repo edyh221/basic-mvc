@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic MVC using Node JS</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>List of Product</h2>
+        <a href="/add" class="link-edit">Add Product</a>
+        <ul>
+            {{#each products}}
+                <li>
+                    <a href="/{{product_id}}">{{product_name}}</a>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</body>
+</html>

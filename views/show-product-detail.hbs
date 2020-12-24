@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic MVC using Node JS</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Detail of {{product.product_name}}</h2>
+        <p>Name: {{product.product_name}}</p>
+        <p>Price: Rp. {{product.product_price}}</p>
+        <p>Description: {{product.product_description}}</p>
+        <a href="/" class="link-back">Back</a>
+        <a href="/{{product.product_id}}/edit" class="link-edit">Edit</a>
+        <a href="javascript:void(0)" class="link-delete" data-id="{{product.product_id}}">Delete</a>
+    </div>
+    <script>
+        const btnDelete = document.querySelector('.link-delete');
+        btnDelete.addEventListener('click', function() {
+            fetch(`/${this.dataset.id}`, {method: 'DELETE'})
+            .then(res => res.json())
+            .then(res => {
+                if(res.affectedRows > 0) {
+                    window.location.href = '/'
+                }
+            })
+        })
+    </script>
+</body>
+</html>
